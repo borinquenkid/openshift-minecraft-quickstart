@@ -1,14 +1,13 @@
 #!/bin/bash
 
-cd $OPENSHIFT_DATA_DIR
-wget https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar -O BuildTools.jar
-export MAVEN_OPTS="-Xmx2G"
-java -Xmx2G -jar BuildTools.jar
-
 #SERVER_PROPERTIES=server.properties
 #MINECRAFT_SERVER_JAR=minecraft_server.jar
 
-#cd $OPENSHIFT_DATA_DIR
+cd $OPENSHIFT_DATA_DIR
+wget https://drive.google.com/open?id=0B8hBYHomw3YGVWNSbWZaa1Z3SU0 -O spigot.jar
+mkdir plugins
+wget https://drive.google.com/open?id=0B8hBYHomw3YGVWNSbWZaa1Z3SU0 -O plugins/wsmc.jar
+
 
 #if [ ! -e $MINECRAFT_SERVER_JAR ]; then
 #   wget https://s3.amazonaws.com/MinecraftDownload/launcher/minecraft_server.jar -O $MINECRAFT_SERVER_JAR
