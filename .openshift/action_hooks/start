@@ -4,4 +4,6 @@
 # $OPENSHIFT_DIY_IP:8080
 
 cd $OPENSHIFT_DATA_DIR
+git config --global user.name "John Doe"
+git config --global user.email johndoe@example.com
 nohup bash -c "exec 'java' '-jar' 'spigot-1.9.jar' '-Xms256M' '-Xmx490M' '-nogui' &> ${OPENSHIFT_DIY_LOG_DIR}minecraft.log" &> /dev/null &
