@@ -1,5 +1,10 @@
 #!/bin/bash
 
+cd $OPENSHIFT_DATA_DIR
+wget https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar -O BuildTools.jar
+export MAVEN_OPTS="-Xmx2G"
+java -Xmx2G -jar BuildTools.jar
+
 #SERVER_PROPERTIES=server.properties
 #MINECRAFT_SERVER_JAR=minecraft_server.jar
 
